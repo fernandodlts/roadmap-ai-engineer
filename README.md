@@ -24,8 +24,8 @@
 </p>
 
 <p>
-  <a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Ffernandodlts%2Froadmap-ai-engineer">
-    <img src="https://vercel.com/button" alt="Deploy with Vercel" />
+  <a href="https://fernandodlts.github.io/roadmap-ai-engineer/">
+    <img src="https://img.shields.io/badge/🚀_Acessar_Roadmap_Ao_Vivo-4f46e5?style=for-the-badge" alt="Acessar Roadmap Ao Vivo" />
   </a>
 </p>
 
@@ -196,13 +196,13 @@ Em jornadas de 4 a 5 meses, um banco estático de exercícios perde a utilidade 
 
 ## 🏗️ Arquitetura Técnica
 
-Construído como uma SPA moderna, rápida e 100% client-side, pronta para hospedagem estática gratuita na CDN da Vercel:
+Construído como uma SPA moderna, rápida e 100% client-side, publicada diretamente pelo **GitHub Pages** com deploy automático via GitHub Actions:
 
 ```text
 roadmap-ai-engineer/
-├── index.html                  # Entry point HTML + favicon SVG + fonte Inter
-├── vercel.json                 # Configuração automática de deploy Vite na Vercel
-├── vite.config.ts              # Vite 8 + React + Tailwind CSS v4 + Vitest
+├── .github/workflows/deploy.yml # CI/CD: testa, compila e publica no GitHub Pages
+├── index.html                   # Entry point HTML + favicon SVG + fonte Inter
+├── vite.config.ts               # Vite 8 + React + Tailwind CSS v4 + Vitest
 └── src/
     ├── types/roadmap.ts        # Contratos TypeScript de todo o domínio e estado
     ├── data/                   # Dados puros e fáceis de editar (fases, semanas, projetos, biblioteca, rotina)
@@ -230,7 +230,7 @@ roadmap-ai-engineer/
 
 <a id="como-rodar"></a>
 
-## ⚡ Como Rodar Localmente & Deploy
+## ⚡ Como Rodar Localmente
 
 ### Pré-requisitos
 - **Node.js 20+** e **npm**
@@ -258,12 +258,6 @@ npm run dev
 | `npm run typecheck` | Valida a tipagem estrita do TypeScript sem gerar arquivos |
 | `npm run build` | Valida TypeScript (`tsc -b`) e gera o bundle otimizado em `dist/` |
 | `npm run preview` | Pré-visualiza localmente o build final de produção |
-
-### Deploy gratuito na Vercel
-
-1. Clique no botão **Deploy with Vercel** no topo deste README (ou importe o repositório em [vercel.com/new](https://vercel.com/new)).
-2. A Vercel detecta automaticamente Vite via `vercel.json` (`npm run build` → `dist/`).
-3. A cada `git push` na branch `main`, uma nova versão vai ao ar automaticamente em segundos.
 
 ---
 
